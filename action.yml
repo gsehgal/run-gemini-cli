@@ -288,6 +288,7 @@ runs:
 
         # Keep track of whether we've failed
         FAILED=false
+        echo "Checking available commands"
         if [ -n "$AVAILABLE_COMMANDS" ]; then
           echo "$AVAILABLE_COMMANDS"
         else 
