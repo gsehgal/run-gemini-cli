@@ -290,6 +290,7 @@ runs:
         FAILED=false
         echo "Checking available commands"
         if [ -n "$AVAILABLE_COMMANDS" ]; then
+          echo "IT IS SET"
           echo "$AVAILABLE_COMMANDS"
         else 
           echo "variable not set"
