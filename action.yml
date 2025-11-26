@@ -275,7 +275,7 @@ runs:
       id: 'gemini_run'
       shell: 'bash'
       run: |-
-        set -eo pipefail
+        set -euo pipefail
 
         # Create a temporary directory for storing the output, and ensure it's
         # cleaned up later
@@ -289,15 +289,12 @@ runs:
         # Keep track of whether we've failed
         FAILED=false
         echo "Checking available commands"
-        set -x
-        if [ -n "$AVAILABLE_COMMANDS" ]; then
+        if [ -n "$AVAILABLE_LABELS" ]; then
           echo "IT IS SET"
-          echo "$AVAILABLE_COMMANDS"
+          echo "$AVAILABLE_LABELS"
         else 
           echo "variable not set"
         fi
-        set -u
-        echo $AVAILABLE_COMMANDS
         set +x
         # Run Gemini CLI with the provided prompt, streaming responses in debug
         if [[ "${DEBUG}" = true ]]; then
