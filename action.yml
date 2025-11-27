@@ -296,6 +296,7 @@ runs:
           echo "variable not set"
         fi
         set +x
+        echo ${PROMPT}
         # Run Gemini CLI with the provided prompt, streaming responses in debug
         if [[ "${DEBUG}" = true ]]; then
           echo "::warning::Gemini CLI debug logging is enabled. This will stream responses, which could reveal sensitive information if processed with untrusted inputs."
