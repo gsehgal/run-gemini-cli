@@ -299,11 +299,14 @@ runs:
           FAILED=true
         fi
 
+        set -x 
+        echo "Printing debug info"
         if [[ "${DEBUG}" = true ]]; then
           # Print stdout and stderr to console for debugging
           cat "${TEMP_STDOUT}"
           cat "${TEMP_STDERR}" >&2
         fi
+        set +x
 
         # Create the artifacts directory and copy full logs
         mkdir -p gemini-artifacts
