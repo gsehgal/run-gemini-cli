@@ -305,6 +305,17 @@ runs:
             FAILED=true
           fi
         fi
+          
+          
+        echo "::: Start Gemini CLI STDOUT :::"
+        cat $TEMP_STDOUT
+        echo "::: End Gemini CLI STDOUT :::"
+
+        echo "::: Start Gemini CLI STDERR:::"
+        cat $TEMP_STDERR
+        echo "::: End Gemini CLI STDERR :::"
+
+        
 
         # Create the artifacts directory and copy full logs
         mkdir -p gemini-artifacts
