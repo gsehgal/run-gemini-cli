@@ -285,7 +285,7 @@ runs:
           rm -f "${TEMP_STDOUT}" "${TEMP_STDERR}"
         }
         trap cleanup EXIT
-
+        echo ":::: THIS IS A TEST TO RUN CLI :::: "
         # Keep track of whether we've failed
         FAILED=false
 
